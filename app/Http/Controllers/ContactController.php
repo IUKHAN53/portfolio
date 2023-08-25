@@ -16,9 +16,12 @@ class ContactController extends Controller
             'message' => 'required'
         ]);
 
-        Mail::to('thecodeholic@gmail.com')
-            ->send(new ContactMail($validated['name'], $validated['email'], $validated['message']));
-
+        try {
+            Mail::to('iu.khan53@gmail.com')
+                ->send(new ContactMail($validated['name'], $validated['email'], $validated['message']));
+        }catch (\Exception $exception){
+            return ['success'=>false, 'message'=>$exception->getMessage()];
+        }
         return ['success'=>true];
     }
 }

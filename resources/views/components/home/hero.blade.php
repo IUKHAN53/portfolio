@@ -35,8 +35,9 @@
         <div class="lg:text-right lg:ml-auto">
           <div class="relative inline-block z-10 pt-11 lg:pt-0">
             <img
-              src="{{ url('/img/your_image.png') }}"
+              src="{{ asset('img/me/2.png') }}"
               alt="hero"
+              width="450px"
               class="max-w-full lg:ml-auto"
             />
             <span class="absolute -left-8 -bottom-8 z-[-1]">

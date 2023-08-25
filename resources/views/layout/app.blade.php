@@ -9,7 +9,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="description" content="IUKHAN - Full Stack Web Developer">
   <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-  <link rel="icon" href="{{ asset('/img/favicon.png') }}" type="image/png">
+  <link rel="icon" href="{{ asset('/img/logo.png') }}" type="image/png">
   <script src="https://apis.google.com/js/platform.js"></script>
 </head>
 <body class="text-gray-800 dark:text-gray-200 ">

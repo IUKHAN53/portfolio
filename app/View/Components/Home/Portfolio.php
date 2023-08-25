@@ -24,55 +24,55 @@ class Portfolio extends Component
             [
                 'category' => ['Laravel', 'Voyager', 'TailwindCSS', 'SAAS'],
                 'title' => 'Cyberenew - A SaaS Project for scanning Domains',
-                'image' => url('/img/cyberenew.png'),
+                'image' => asset('img/tall.png'),
                 'github' => 'https://github.com/IUKHAN53/cyberenew'
             ],
             [
                 'category' => ['Laravel', 'Bootstrap5', 'SAAS'],
                 'title' => 'Tongletap - A Laravel EAP Project',
-                'image' => url('/img/tongletap.png'),
+                'image' => asset('img/tall.png'),
                 'github' => 'https://github.com/IUKHAN53/tongletap'
             ],
             [
                 'category' => ['Laravel', 'PWA'],
                 'title' => 'Bethackx - A PWA project for bettors',
-                'image' => url('/img/bethackx.png'),
+                'image' => asset('img/tall.png'),
                 'github' => 'https://github.com/IUKHAN53/bethackx'
             ],
             [
                 'category' => ['Laravel', 'Angular', 'SAAS'],
                 'title' => 'Autolonix - Inventory and Account Management System',
-                'image' => url('/img/autolonix.png'),
+                'image' => asset('img/tall.png'),
                 'github' => 'https://github.com/IUKHAN53/autolonix'
             ],
             [
                 'category' => ['Laravel'],
                 'title' => 'Scammerscheck - Personal Side project for checking scammers',
-                'image' => url('/img/scammerscheck.png'),
+                'image' => asset('img/tall.png'),
                 'github' => 'https://github.com/IUKHAN53/scammerscheck'
             ],
             [
                 'category' => ['Laravel'],
                 'title' => 'Power System - A Crypto Project for managing portfolio',
-                'image' => url('/img/power_system.png'),
+                'image' => asset('img/tall.png'),
                 'github' => 'https://github.com/IUKHAN53/power_system'
             ],
             [
                 'category' => ['Laravel'],
                 'title' => 'Twilio-Dialer - A dialer for Twilio',
-                'image' => url('/img/twilio-dialer.png'),
+                'image' => asset('img/tall.png'),
                 'github' => 'https://github.com/IUKHAN53/Twilio-Dialer'
             ],
             [
                 'category' => ['Laravel'],
                 'title' => 'Issue Tracker - A Kanban board for tracking issues',
-                'image' => url('/img/issue_tracker.png'),
+                'image' => asset('img/tall.png'),
                 'github' => 'https://github.com/IUKHAN53/issue_tracker'
             ],
             [
                 'category' => ['Laravel'],
                 'title' => 'Ruppee - A Freelancing Platform',
-                'image' => url('/img/ruppee.png'),
+                'image' => asset('img/tall.png'),
                 'github' => 'https://github.com/IUKHAN53/ruppee'
             ],
         ];

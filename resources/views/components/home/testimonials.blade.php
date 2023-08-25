@@ -1,18 +1,13 @@
 <!-- ====== Testimonials Section Start -->
-<section class="pt-20 lg:pt-[120px] pb-20 lg:pb-[120px] dark:bg-slate-800">
+<section class="pt-20 lg:pt-[120px] pb-20 lg:pb-[120px] dark:bg-slate-800" id="testimonials">
   <div class="container">
     <div
       x-data="
 {
-  slides: ['1','2','3'],
+  slides: ['1','2','3', '4', '5', '6','7','8','9', '10'],
   activeSlide: 1,
   activeButton: 'w-[30px] bg-primary',
   button: 'w-[10px] bg-[#E4E4E4]',
-  testimonials: [
-    { image: 'image-01.jpg', quote: 'Build API and Tests', name: 'ubay25', title: 'I highly recommend this seller, he\'s quite skillful and delivered the work on time. He\'s done all my requests and provided explanations that helped me a lot understand the features. I would not hesitate to use his services again as his very professional, his quality of work is excellent and delivers on time' },
-    { image: 'image-02.jpg', quote: 'Testimonial 2', name: 'Jane Doe', title: 'Marketing Manager.' },
-    { image: 'image-03.jpg', quote: 'Testimonial 3', name: 'John Smith', title: 'Product Manager.' }
-  ]
 }
 "
     >
@@ -20,44 +15,34 @@
         <div class=" w-full md:w-11/12 lg:w-10/12 xl:w-8/12 relative pb-16 xl:pb-0 ">
           <div
             x-ref="carousel"
-            class="snap w-full max-w-[300px] xs:max-w-[368px] sm:max-w-[508px] md:max-w-[630px] lg:max-w-[738px] 2xl:max-w-[850px] mx-auto h-auto flex flex-no-wrap overflow-hidden transition-all"
-          >
-            <template x-for="testimonial in testimonials" :key="testimonial.name">
+            class="snap w-full max-w-[300px] xs:max-w-[368px] sm:max-w-[508px] md:max-w-[630px] lg:max-w-[738px] 2xl:max-w-[850px] mx-auto h-auto flex flex-no-wrap overflow-hidden transition-all">
+            @foreach($reviews as $review)
               <div
-                class="min-w-[300px] xs:min-w-[368px] sm:min-w-[508px] md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[850px] mx-auto h-full sm:p-6"
-              >
+                class="min-w-[300px] xs:min-w-[368px] sm:min-w-[508px] md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[850px] mx-auto h-full sm:p-6">
                 <div class="w-full md:flex items-center">
                   <div
-                    class="max-w-[310px] md:max-w-[250px] lg:max-w-[280px] w-full md:mr-12 lg:mr-14 2xl:mr-16 mb-12 md:mb-0 relative"
-                  >
-                    <img
-                      :src="`https://cdn.tailgrids.com/1.0/assets/images/testimonials/testimonial-01/${testimonial.image}`"
-                      alt="image"
-                      class="w-full"
-                    />
+                    class="max-w-[310px] md:max-w-[250px] lg:max-w-[280px] w-full md:mr-12 lg:mr-14 2xl:mr-16 mb-12 md:mb-0 relative">
+                    <img src="{{ $review['image'] }}" alt="image" class="w-full"/>
                   </div>
                   <div class="w-full">
                     <div>
                       <div class="mb-7">
-                        <img
-                          src="{{ asset('img/fiverr.svg') }}"
-                          alt="lineicon"
-                        />
+                        <img src="{{ asset('img/fiverr.svg') }}" alt="fiverr review"/>
                       </div>
                       <p class="font-medium italic text-body-color text-base sm:text-lg mb-11">
-                        <span x-text="testimonial.quote"></span>
+                        <span>{{ $review['quote'] }}</span>
                       </p>
                       <h4 class="font-semibold text-dark text-xl">
-                        <span x-text="testimonial.name"></span>
+                        <span>{{ $review['name'] }}</span>
                       </h4>
                       <p class="text-body-color text-base">
-                        <span x-text="testimonial.title"></span>
+                        <span>{{ $review['title'] }}</span>
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-            </template>
+            @endforeach
           </div>
           {{--          corrousal buttons--}}
           <div

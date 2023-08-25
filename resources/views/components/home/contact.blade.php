@@ -118,7 +118,7 @@
                       email: '',
                       message: '',
                     };
-                    this.successMessage = 'Thanks for your contact request. I will get back to you shortly.';
+                    this.successMessage = 'Thanks for your contact request. I will get back to you shortly. For faster response try contacting directly';
                   })
                   .catch(async (response) => {
                     const res= await response.json()
